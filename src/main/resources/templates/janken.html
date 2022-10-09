@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Janken</title>
+</head>
+
+<body>
+  <h1>Janken GAME!</h1>
+  <div th:if="${username}">
+    Hi [[${username}]]
+  </div>
+
+  <p>
+    <a href="jankengame?hand=gu">ぐー</a>
+    <a href="jankengame?hand=tyoki">ちょき</a>
+    <a href="jankengame?hand=pa">ぱー</a>
+  </p>
+</body>
