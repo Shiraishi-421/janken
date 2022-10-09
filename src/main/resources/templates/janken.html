@@ -13,8 +13,17 @@
   </div>
 
   <p>
-    <a href="jankengame?hand=gu">ぐー</a>
-    <a href="jankengame?hand=tyoki">ちょき</a>
-    <a href="jankengame?hand=pa">ぱー</a>
+    <a href="jankengame?hand=Gu">ぐー</a>
+    <a href="jankengame?hand=Tyoki">ちょき</a>
+    <a href="jankengame?hand=Pa">ぱー</a>
   </p>
+  <div th:if="${my}">
+    あなたの手 [[${my}]]
+  </div>
+  <div th:if="${opponent}">
+    相手の手 [[${opponent}]]
+  </div>
+  <div th:if="${result}">
+    結果 You [[${result}]]
+  </div>
 </body>
