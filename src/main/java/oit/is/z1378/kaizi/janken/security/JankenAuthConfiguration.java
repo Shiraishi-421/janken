@@ -38,13 +38,18 @@ public class JankenAuthConfiguration {
         .password("$2y$10$jn3a9qMn5QjXWsBQt9fua.Za2txrOsYdvl7J6QFbkn1L51UOv/nmW")
         .roles("USER")
         .build();
+    UserDetails user3 = users
+        .username("ほんだ")
+        .password("$2y$10$Eu/24svjSRFl613GcOGPZOiD7MbYEBa2nyVE5omFaJotrCStVeEPW")
+        .roles("USER")
+        .build();
     UserDetails admin = users
         .username("admin")
         .password("$2y$10$ngxCDmuVK1TaGchiYQfJ1OAKkd64IH6skGsNw1sLabrTICOHPxC0e")
         .roles("ADMIN")
         .build();
     // 生成したユーザをImMemoryUserDetailsManagerに渡す（いくつでも良い）
-    return new InMemoryUserDetailsManager(user1, user2, admin);
+    return new InMemoryUserDetailsManager(user1, user2, user3, admin);
   }
 
   /**
